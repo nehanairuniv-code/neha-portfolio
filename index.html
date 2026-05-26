@@ -1,0 +1,1035 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Neha Nair — Social Media & Content</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --black:   #120909;
+  --deep:    #2a0003;
+  --mid:     #3d0707;
+  --burg:    #5a0b0b;
+  --cream:   #f3eee7;
+  --cream2:  #d6c8b8;
+  --cream3:  #ece5dc;
+  --gold:    #b8965a;
+  --gold2:   #d4aa6a;
+  --ink:     #1a1010;
+  --muted:   rgba(243,238,231,0.45);
+  --rule:    rgba(243,238,231,0.1);
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--black);
+  color: var(--cream);
+  overflow-x: hidden;
+  cursor: none;
+}
+
+/* ── CURSOR ── */
+.cur { position:fixed; width:8px; height:8px; background:var(--cream); border-radius:50%; pointer-events:none; z-index:9999; transform:translate(-50%,-50%); transition:transform 0.1s; mix-blend-mode:difference; }
+.cur-ring { position:fixed; width:36px; height:36px; border:1px solid rgba(243,238,231,0.3); border-radius:50%; pointer-events:none; z-index:9998; transform:translate(-50%,-50%); transition:all 0.22s cubic-bezier(0.22,1,0.36,1); }
+
+/* ── NAV ── */
+nav {
+  position: fixed; top:0; left:0; right:0; z-index:500;
+  display: flex; align-items:center; justify-content:space-between;
+  padding: 1.75rem 4rem;
+  transition: background 0.4s, backdrop-filter 0.4s;
+}
+nav.scrolled {
+  background: rgba(18,9,9,0.88);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--rule);
+}
+.nav-logo {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.1rem; font-weight: 400; font-style: italic;
+  color: var(--cream); text-decoration: none; letter-spacing: 0.04em;
+}
+.nav-links { display:flex; gap:3rem; list-style:none; }
+.nav-links a {
+  font-size: 11px; font-weight: 400; letter-spacing: 0.22em; text-transform: uppercase;
+  color: var(--muted); text-decoration: none; transition: color 0.25s;
+}
+.nav-links a:hover { color: var(--cream); }
+
+/* ── HERO ── */
+.hero {
+  min-height: 100vh; position: relative;
+  display: grid; grid-template-columns: 1fr 1fr;
+  overflow: hidden;
+}
+.hero-left {
+  background: var(--deep);
+  display: flex; flex-direction:column; justify-content:flex-end;
+  padding: 10rem 5rem 6rem;
+  position: relative; z-index: 2;
+}
+.hero-left::after {
+  content: '';
+  position: absolute; right:0; top:10%; bottom:10%; width:1px;
+  background: linear-gradient(to bottom, transparent, var(--rule), var(--rule), transparent);
+}
+.hero-eyebrow {
+  font-size: 11px; font-weight: 400; letter-spacing: 0.3em; text-transform: uppercase;
+  color: var(--gold); margin-bottom: 2.5rem;
+  display: flex; align-items:center; gap:1.5rem;
+}
+.hero-eyebrow::before { content:''; width:30px; height:1px; background:var(--gold); opacity:0.5; }
+.hero-h1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(4.5rem, 7.5vw, 8.5rem);
+  font-weight: 300; line-height: 0.88; letter-spacing: -0.03em;
+  color: var(--cream); margin-bottom: 0.15em;
+}
+.hero-h1 em { font-style: italic; color: var(--cream2); }
+.hero-rule { width:100%; height:1px; background:var(--rule); margin:2.5rem 0; }
+.hero-desc {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.15rem; font-weight: 300; font-style: italic;
+  color: var(--muted); line-height: 2; max-width: 380px; margin-bottom: 3rem;
+}
+.hero-badges { display:flex; flex-direction:column; gap:8px; margin-bottom:3rem; }
+.hero-badge {
+  font-size: 10px; font-weight: 400; letter-spacing: 0.2em; text-transform: uppercase;
+  color: var(--gold2); display:flex; align-items:center; gap:14px;
+}
+.hero-badge::before { content:''; width:18px; height:1px; background:var(--gold); }
+.hero-cta {
+  font-size: 11px; font-weight: 400; letter-spacing: 0.28em; text-transform: uppercase;
+  color: var(--cream); border: 1px solid rgba(243,238,231,0.2);
+  padding: 1rem 2.5rem; text-decoration: none; width: fit-content;
+  transition: all 0.3s; display: inline-block;
+}
+.hero-cta:hover { background: rgba(243,238,231,0.06); border-color: rgba(243,238,231,0.4); }
+
+/* HERO RIGHT */
+.hero-right {
+  position: relative; overflow: hidden;
+  background: var(--mid);
+}
+.hero-photo {
+  position: absolute; inset:0; width:100%; height:100%; object-fit:cover; opacity:0.7;
+}
+.hero-photo-overlay {
+  position: absolute; inset:0;
+  background: linear-gradient(135deg, rgba(42,0,3,0.5) 0%, transparent 60%);
+}
+.hero-right-corner {
+  position: absolute; top:5.5rem; right:2.5rem;
+  display:flex; flex-direction:column; gap:6px; z-index:3;
+}
+.hero-corner-badge {
+  font-size: 9px; font-weight: 400; letter-spacing: 0.18em; text-transform: uppercase;
+  padding: 7px 14px;
+  background: rgba(18,9,9,0.6); backdrop-filter: blur(12px);
+  border: 1px solid var(--rule); color: rgba(243,238,231,0.55);
+}
+.hero-right-bottom {
+  position: absolute; bottom:2.5rem; left:2.5rem; z-index:3;
+}
+.hero-right-tag { font-size: 10px; letter-spacing:0.22em; text-transform:uppercase; color:var(--gold); margin-bottom:6px; }
+.hero-right-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.4rem; font-weight: 300; font-style: italic;
+  color: rgba(243,238,231,0.75);
+}
+
+/* ── MARQUEE ── */
+.marquee { background:var(--burg); padding:12px 0; overflow:hidden; white-space:nowrap; }
+.marquee-track { display:inline-flex; animation:marq 45s linear infinite; }
+.marquee-item {
+  font-size: 10px; font-weight: 400; letter-spacing: 0.28em; text-transform: uppercase;
+  color: rgba(243,238,231,0.5); padding: 0 3rem;
+}
+.marquee-sep { color: var(--gold2); opacity:0.6; }
+@keyframes marq { 0%{transform:translateX(0)} 100%{transform:translateX(-50%)} }
+
+/* ── SECTION LABELS ── */
+.eyebrow {
+  font-size: 11px; font-weight: 400; letter-spacing: 0.32em; text-transform: uppercase;
+  color: var(--gold); margin-bottom: 2rem;
+  display:flex; align-items:center; gap:1.25rem;
+}
+.eyebrow::before { content:''; width:22px; height:1px; background:var(--gold); opacity:0.6; }
+
+/* ── ABOUT ── */
+.about {
+  display: grid; grid-template-columns: 1fr 1fr;
+  background: var(--deep);
+  border-top: 1px solid var(--rule);
+}
+.about-left { padding: 10rem 5rem; border-right: 1px solid var(--rule); }
+.about-h {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2.8rem, 4vw, 5rem);
+  font-weight: 300; line-height: 1.0; letter-spacing: -0.02em;
+  color: var(--cream); margin-bottom: 2.5rem;
+}
+.about-h em { font-style: italic; color: var(--cream2); }
+.about-body {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.15rem; font-weight: 300; line-height: 2;
+  color: var(--muted); max-width: 460px;
+}
+.about-body p+p { margin-top:1.5rem; }
+.about-right { padding: 10rem 4.5rem; display:flex; flex-direction:column; justify-content:space-between; }
+.stats { display:grid; grid-template-columns:1fr 1fr; gap:3rem; }
+.stat-n {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 3.8rem; font-weight: 300; font-style: italic;
+  line-height: 1; color: var(--cream); letter-spacing: -0.02em;
+}
+.stat-l { font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted); margin-top:6px; }
+.tags { display:flex; flex-wrap:wrap; gap:7px; margin-top:2.5rem; }
+.tag {
+  font-size: 9px; letter-spacing: 0.16em; text-transform: uppercase;
+  padding: 7px 15px; border: 1px solid var(--rule);
+  color: var(--muted); transition: all 0.2s;
+}
+.tag:hover { border-color: var(--gold); color: var(--gold); }
+
+/* ── WORK ── */
+.work { padding: 10rem 5rem; background: var(--black); }
+.work-header { margin-bottom: 6rem; }
+.work-h {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(3rem, 5vw, 6rem);
+  font-weight: 300; line-height: 0.9; letter-spacing: -0.03em;
+  color: var(--cream);
+}
+.work-h em { font-style: italic; color: var(--cream2); display:block; }
+.work-sub {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.1rem; font-weight: 300; font-style: italic;
+  color: var(--muted); margin-top: 1.5rem; max-width: 500px; line-height: 1.9;
+}
+
+/* VIDEO GRID — 2 portrait + 1 wide OOO */
+.video-section { margin-bottom: 8rem; }
+.video-row-top {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3px;
+  margin-bottom: 3px;
+}
+.vcard {
+  position: relative; overflow: hidden;
+  background: var(--mid); cursor: pointer;
+}
+.vcard.portrait { aspect-ratio: 9/16; }
+.vcard.wide { aspect-ratio: 16/9; }
+.vcard iframe {
+  position:absolute; inset:0; width:100%; height:100%;
+  border:none; display:block;
+}
+.vcard-overlay {
+  position: absolute; inset:0;
+  background: linear-gradient(to top, rgba(18,9,9,0.85) 0%, transparent 50%);
+  opacity: 0; transition: opacity 0.35s; z-index:2;
+}
+.vcard:hover .vcard-overlay { opacity:1; }
+.vcard-info {
+  position: absolute; bottom:0; left:0; right:0;
+  padding: 2rem; z-index:3;
+  transform: translateY(8px); opacity:0; transition: all 0.35s;
+}
+.vcard:hover .vcard-info { transform:translateY(0); opacity:1; }
+.vcard-tag { font-size:9px; letter-spacing:0.2em; text-transform:uppercase; color:var(--gold); margin-bottom:5px; }
+.vcard-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.1rem; font-style: italic; font-weight:300;
+  color: rgba(243,238,231,0.88); line-height: 1.35;
+}
+
+/* CAMPAIGN GRID — editorial asymmetric */
+.campaign-section { margin-bottom: 8rem; }
+.campaign-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.9fr 0.9fr;
+  grid-template-rows: auto auto;
+  gap: 3px;
+}
+.ccard {
+  position: relative; overflow: hidden;
+  background: var(--mid); aspect-ratio: 9/16; cursor: pointer;
+}
+.ccard.span2 { grid-column: span 2; aspect-ratio: 16/9; }
+.ccard img {
+  position: absolute; inset:0; width:100%; height:100%; object-fit:cover;
+  opacity: 0.8; transition: transform 0.6s cubic-bezier(0.22,1,0.36,1), opacity 0.4s;
+}
+.ccard:hover img { transform: scale(1.03); opacity:1; }
+.ccard-label {
+  position: absolute; bottom:0; left:0; right:0;
+  padding: 1.5rem; z-index:2;
+  background: linear-gradient(to top, rgba(18,9,9,0.8) 0%, transparent 100%);
+  transform: translateY(5px); opacity:0; transition: all 0.3s;
+}
+.ccard:hover .ccard-label { transform: translateY(0); opacity:1; }
+.ccard-tag { font-size:9px; letter-spacing:0.2em; text-transform:uppercase; color:var(--gold); margin-bottom:4px; }
+.ccard-name { font-family:'Cormorant Garamond',serif; font-size:1rem; font-style:italic; color:var(--cream); }
+
+/* CAROUSEL */
+.carousel-section { margin-bottom: 8rem; }
+.carousel-outer { position:relative; overflow:hidden; }
+.carousel-track { display:flex; transition: transform 0.65s cubic-bezier(0.22,1,0.36,1); }
+.carousel-slide { min-width:100%; position:relative; }
+.carousel-slide img { width:100%; display:block; object-fit:cover; }
+.carousel-slide.r45 .c-img { aspect-ratio:4/5; object-fit:cover; max-height:70vh; margin:0 auto; }
+.c-btn {
+  position: absolute; top:50%; transform:translateY(-50%);
+  width:44px; height:44px; background:rgba(18,9,9,0.7);
+  backdrop-filter:blur(8px);
+  border:1px solid var(--rule); color:var(--cream);
+  font-size:18px; cursor:pointer; z-index:10;
+  display:flex; align-items:center; justify-content:center;
+  transition: background 0.2s;
+}
+.c-btn:hover { background:rgba(90,11,11,0.8); }
+.c-btn.prev { left:1.5rem; }
+.c-btn.next { right:1.5rem; }
+.carousel-dots {
+  position:absolute; bottom:1.5rem; left:50%; transform:translateX(-50%);
+  display:flex; gap:7px; z-index:10;
+}
+.dot {
+  width:5px; height:5px; border-radius:50%;
+  background:rgba(243,238,231,0.25);
+  cursor:pointer; transition:background 0.25s;
+}
+.dot.active { background:var(--gold); }
+
+/* META ADS GRID */
+.ads-grid {
+  display: grid; grid-template-columns: repeat(3,1fr); gap:3px;
+  margin-bottom: 3rem;
+}
+.ad-item { position:relative; overflow:hidden; aspect-ratio:1/1; background:var(--mid); }
+.ad-item img { width:100%; height:100%; object-fit:cover; opacity:0.85; transition:transform 0.5s,opacity 0.3s; }
+.ad-item:hover img { transform:scale(1.04); opacity:1; }
+
+/* BLOG CARD */
+.blog-card {
+  background: var(--deep); border:1px solid var(--rule);
+  padding: 4rem; display:flex; align-items:flex-start;
+  gap: 4rem; margin-bottom: 3px; cursor:pointer;
+  transition: background 0.3s; text-decoration:none;
+}
+.blog-card:hover { background: var(--mid); }
+.blog-label { font-size:10px; letter-spacing:0.25em; text-transform:uppercase; color:var(--gold); margin-bottom:1rem; }
+.blog-title {
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(1.6rem,2.5vw,2.6rem); font-weight:300; font-style:italic;
+  color:var(--cream); line-height:1.2; max-width:600px; margin-bottom:1rem;
+}
+.blog-link { font-size:10px; letter-spacing:0.2em; text-transform:uppercase; color:var(--muted); }
+.blog-arrow {
+  margin-left:auto; flex-shrink:0;
+  font-family:'Cormorant Garamond',serif; font-size:2.5rem; font-weight:300;
+  color:rgba(243,238,231,0.2); transition:color 0.3s; line-height:1;
+}
+.blog-card:hover .blog-arrow { color:var(--gold); }
+
+/* SOCIAL MENTION */
+.social-mention {
+  background:var(--mid); border:1px solid var(--rule);
+  padding:3rem 4rem; margin-bottom:8rem;
+  display:flex; align-items:center; gap:3rem;
+}
+.social-mention-icon { font-size:1.5rem; opacity:0.4; }
+.social-mention-text {
+  font-family:'Cormorant Garamond',serif;
+  font-size:1.15rem; font-style:italic; font-weight:300;
+  color:var(--muted); line-height:1.8; max-width:600px;
+}
+.social-mention-links { display:flex; flex-direction:column; gap:8px; margin-left:auto; }
+.social-link {
+  font-size:10px; letter-spacing:0.2em; text-transform:uppercase;
+  color:var(--gold); text-decoration:none; transition:opacity 0.2s;
+  display:flex; align-items:center; gap:8px;
+}
+.social-link::after { content:'→'; }
+.social-link:hover { opacity:0.7; }
+
+/* ── EXPERIENCE ── */
+.exp {
+  display:grid; grid-template-columns:38% 62%;
+  background:var(--deep); border-top:1px solid var(--rule);
+}
+.exp-left { padding:10rem 4rem 10rem 5rem; position:sticky; top:5rem; align-self:start; }
+.exp-h {
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(2.5rem,4vw,5rem); font-weight:300; line-height:1.0;
+  color:var(--cream); letter-spacing:-0.02em;
+}
+.exp-h em { font-style:italic; color:var(--cream2); display:block; }
+.exp-bg {
+  font-family:'Cormorant Garamond',serif; font-size:9rem; font-weight:300;
+  font-style:italic; color:rgba(243,238,231,0.03); line-height:1;
+  letter-spacing:-0.05em; margin-top:1rem;
+}
+.exp-right { padding:10rem 5rem 10rem 4rem; border-left:1px solid var(--rule); }
+.exp-item { padding:3rem 0; border-bottom:1px solid var(--rule); }
+.exp-item:first-child { padding-top:0; }
+.exp-period { font-size:10px; letter-spacing:0.2em; text-transform:uppercase; color:var(--gold); margin-bottom:0.75rem; }
+.exp-role {
+  font-family:'Cormorant Garamond',serif;
+  font-size:1.5rem; font-weight:400; color:var(--cream); margin-bottom:4px;
+}
+.exp-co {
+  font-family:'Cormorant Garamond',serif;
+  font-size:1rem; font-style:italic; font-weight:300; color:var(--muted); margin-bottom:1.5rem;
+}
+.exp-pts { list-style:none; display:flex; flex-direction:column; gap:6px; }
+.exp-pts li {
+  font-family:'Cormorant Garamond',serif;
+  font-size:1.05rem; font-weight:300; color:var(--muted);
+  line-height:1.9; padding-left:18px; position:relative;
+}
+.exp-pts li::before { content:'·'; position:absolute; left:0; color:var(--gold); }
+
+/* ── EDUCATION ── */
+.edu { padding:10rem 5rem; background:var(--black); border-top:1px solid var(--rule); }
+.edu-grid { display:grid; grid-template-columns:1fr 1fr; gap:2px; margin-top:5rem; }
+.edu-card {
+  background:var(--deep); border:1px solid var(--rule);
+  padding:3.5rem; position:relative; overflow:hidden;
+}
+.edu-card::before {
+  content:''; position:absolute; top:0; left:0; right:0; height:2px;
+  background:linear-gradient(to right, var(--burg), transparent);
+}
+.edu-yr {
+  font-family:'Cormorant Garamond',serif; font-size:5rem; font-weight:300;
+  font-style:italic; color:rgba(243,238,231,0.04); line-height:1;
+  margin-bottom:2rem; letter-spacing:-0.03em;
+}
+.edu-deg { font-size:0.85rem; font-weight:400; letter-spacing:0.06em; color:var(--cream); margin-bottom:5px; text-transform:uppercase; }
+.edu-inst {
+  font-family:'Cormorant Garamond',serif; font-size:1rem;
+  font-style:italic; font-weight:300; color:var(--muted); margin-bottom:12px;
+}
+.edu-note { font-size:9px; letter-spacing:0.16em; text-transform:uppercase; color:var(--gold); }
+
+/* ── CONTACT ── */
+.contact {
+  display:grid; grid-template-columns:1fr 1fr;
+  background:var(--deep); border-top:1px solid var(--rule);
+}
+.contact-left { padding:10rem 5rem; border-right:1px solid var(--rule); }
+.contact-h {
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(3.5rem,6vw,7.5rem); font-weight:300; line-height:0.88;
+  letter-spacing:-0.03em; color:var(--cream); margin-bottom:2rem;
+}
+.contact-h em { font-style:italic; color:var(--cream2); display:block; }
+.contact-sub {
+  font-family:'Cormorant Garamond',serif; font-size:1.1rem; font-weight:300;
+  font-style:italic; color:var(--muted); margin-bottom:4rem; line-height:1.95;
+  max-width:380px;
+}
+.clinks { display:flex; flex-direction:column; }
+.clink {
+  display:flex; align-items:center; gap:1.25rem;
+  text-decoration:none; color:var(--muted);
+  font-family:'Cormorant Garamond',serif; font-size:1.05rem; font-weight:300;
+  padding:1.25rem 0; border-bottom:1px solid var(--rule); transition:color 0.25s;
+}
+.clink:hover { color:var(--cream); }
+.clink-icon {
+  width:28px; height:28px; border:1px solid var(--rule);
+  display:flex; align-items:center; justify-content:center;
+  font-size:11px; color:var(--gold); flex-shrink:0; transition:border-color 0.25s;
+}
+.clink:hover .clink-icon { border-color:var(--gold); }
+.contact-right {
+  padding:10rem 5rem; display:flex; align-items:center; justify-content:center;
+  background:var(--mid);
+}
+.contact-img-wrap {
+  width:100%; max-width:360px; aspect-ratio:9/16;
+  position:relative; overflow:hidden; background:var(--burg);
+}
+.contact-img-wrap img { width:100%; height:100%; object-fit:cover; opacity:0.85; }
+.contact-img-overlay {
+  position:absolute; bottom:0; left:0; right:0;
+  padding:2.5rem;
+  background:linear-gradient(to top,rgba(18,9,9,0.9) 0%,transparent 100%);
+}
+.contact-img-name {
+  font-family:'Cormorant Garamond',serif; font-size:1.6rem;
+  font-weight:300; font-style:italic; color:var(--cream);
+}
+.contact-img-role { font-size:10px; letter-spacing:0.2em; text-transform:uppercase; color:var(--gold); margin-top:4px; }
+
+/* ── FOOTER ── */
+footer {
+  background:var(--black); padding:2.5rem 5rem;
+  display:flex; align-items:center; justify-content:space-between;
+  border-top:1px solid var(--rule);
+}
+.footer-l { font-family:'Cormorant Garamond',serif; font-size:1rem; font-style:italic; font-weight:300; color:var(--muted); }
+.footer-r { font-size:10px; letter-spacing:0.2em; text-transform:uppercase; color:rgba(243,238,231,0.18); }
+
+
+/* ── SCROLL REVEAL ── */
+.reveal {
+  opacity:0; transform:translateY(36px);
+  filter:blur(4px); transition:opacity 1.2s cubic-bezier(0.22,1,0.36,1), transform 1.2s cubic-bezier(0.22,1,0.36,1), filter 1.2s cubic-bezier(0.22,1,0.36,1);
+}
+.reveal.in { opacity:1; transform:translateY(0); filter:blur(0); }
+.reveal-d1 { transition-delay:0.1s; }
+.reveal-d2 { transition-delay:0.22s; }
+.reveal-d3 { transition-delay:0.34s; }
+.reveal-d4 { transition-delay:0.46s; }
+
+/* ── SECTION DIVIDER ── */
+.sdiv {
+  position:relative; padding:4rem 0;
+  display:flex; align-items:center; justify-content:center; overflow:hidden;
+}
+.sdiv-dots {
+  display:flex; gap:8px; align-items:center;
+}
+.sdiv-dots span {
+  color:rgba(184,150,90,0.25); font-size:1.2rem;
+}
+.sdiv-text {
+  font-family:'Cormorant Garamond',serif; font-size:clamp(2rem,3vw,3rem);
+  font-weight:300; font-style:italic; color:rgba(243,238,231,0.18);
+  position:relative; z-index:2; padding:0 3rem;
+  animation:sdivFloat 7s ease-in-out infinite; letter-spacing:0.06em;
+  white-space:nowrap;
+}
+.sdiv-arrow { position:absolute; font-size:1.2rem; color:rgba(184,150,90,0.18); animation:arrowF 4s ease-in-out infinite; }
+.sdiv-arrow.l { left:14%; } .sdiv-arrow.r { right:14%; animation-delay:1.3s; }
+@keyframes sdivFloat { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-5px)} }
+@keyframes arrowF { 0%,100%{transform:translateY(0);opacity:0.2} 50%{transform:translateY(-6px);opacity:0.6} }
+
+/* RESPONSIVE */
+@media(max-width:900px){
+  nav{padding:1.2rem 1.5rem}
+  .nav-links{gap:1.5rem}
+  .hero,.about,.exp,.contact{grid-template-columns:1fr}
+  .hero-right,.contact-right{display:none}
+  .hero-left,.about-left,.about-right,.exp-left,.exp-right,.contact-left{padding:5rem 2rem}
+  .about-left{border-right:none;border-bottom:1px solid var(--rule)}
+  .exp-left{position:static;padding-bottom:2rem}
+  .exp-right{border-left:none;padding:0 2rem 4rem}
+  .work,.edu{padding:5rem 2rem}
+  .video-row-top{grid-template-columns:1fr}
+  .campaign-grid{grid-template-columns:1fr 1fr}
+  .ccard.span2{grid-column:span 2;aspect-ratio:4/3}
+  .ads-grid{grid-template-columns:1fr 1fr}
+  .edu-grid{grid-template-columns:1fr}
+  footer{padding:1.5rem 2rem;flex-direction:column;gap:8px;text-align:center}
+  .social-mention{flex-direction:column;gap:1.5rem}
+  .social-mention-links{margin-left:0}
+  .blog-card{flex-direction:column;gap:1.5rem}
+  .blog-arrow{margin-left:0}
+}
+</style>
+</head>
+<body>
+
+<div class="cur" id="cur"></div>
+<div class="cur-ring" id="curRing"></div>
+
+<!-- ── NAV ── -->
+<nav id="nav">
+  <a href="#" class="nav-logo">Neha Nair</a>
+  <ul class="nav-links">
+    <li><a href="#work">Work</a></li>
+    <li><a href="#exp">Experience</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- ── HERO ── -->
+<section class="hero">
+  <div class="hero-left">
+    <p class="hero-eyebrow">Portfolio · 2026</p>
+    <h1 class="hero-h1">NEHA<br><em>Nair.</em></h1>
+    <div class="hero-rule"></div>
+    <p class="hero-desc">Social media executive, visual director and brand storyteller — with a background in psychology and a relentless eye for luxury aesthetics.</p>
+    <div class="hero-badges">
+      <span class="hero-badge">UAE Golden Visa</span>
+      <span class="hero-badge">FAD Dubai · LBM Jun 2026</span>
+      <span class="hero-badge">Available Immediately</span>
+    </div>
+    <a href="#contact" class="hero-cta">Commission a conversation</a>
+  </div>
+  <div class="hero-right">
+    <img class="hero-photo" src="https://drive.google.com/thumbnail?id=1Q3IMA1skf52zk165rFOzerTdozdzsfnZ&sz=w1200" alt="Neha Nair">
+    <div class="hero-photo-overlay"></div>
+    <div class="hero-right-corner">
+      <div class="hero-corner-badge">UAE Golden Visa</div>
+      <div class="hero-corner-badge">FAD Dubai · Jun 2026</div>
+      <div class="hero-corner-badge">Dubai Ready</div>
+    </div>
+    <div class="hero-right-bottom">
+      <p class="hero-right-tag">Social Media Executive</p>
+      <p class="hero-right-name">Sommer Beauty · 2025</p>
+    </div>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee">
+  <div class="marquee-track">
+    <span class="marquee-item">Content Strategy <span class="marquee-sep">✦</span></span>
+    <span class="marquee-item">Visual Direction <span class="marquee-sep">✦</span></span>
+    <span class="marquee-item">Moodboarding <span class="marquee-sep">✦</span></span>
+    <span class="marquee-item">Brand Storytelling <span class="marquee-sep">✦</span></span>
+    <span class="marquee-item">Production Coordination <span class="marquee-sep">✦</span></span>
+    <span class="marquee-item">Campaign Ideation <span class="marquee-sep">✦</span></span>
+    <span class="marquee-item">Influencer Marketing <span class="marquee-sep">✦</span></span>
+    <span class="marquee-item">Psychology-Led Content <span class="marquee-sep">✦</span></span>
+    <span class="marquee-item">Luxury Aesthetics <span class="marquee-sep">✦</span></span>
+    <span class="marquee-item">Content Strategy <span class="marquee-sep">✦</span></span>
+    <span class="marquee-item">Visual Direction <span class="marquee-sep">✦</span></span>
+    <span class="marquee-item">Moodboarding <span class="marquee-sep">✦</span></span>
+    <span class="marquee-item">Brand Storytelling <span class="marquee-sep">✦</span></span>
+    <span class="marquee-item">Production Coordination <span class="marquee-sep">✦</span></span>
+    <span class="marquee-item">Campaign Ideation <span class="marquee-sep">✦</span></span>
+    <span class="marquee-item">Influencer Marketing <span class="marquee-sep">✦</span></span>
+    <span class="marquee-item">Psychology-Led Content <span class="marquee-sep">✦</span></span>
+    <span class="marquee-item">Luxury Aesthetics <span class="marquee-sep">✦</span></span>
+  </div>
+</div>
+
+<!-- SECTION DIV -->
+<div class="sdiv" style="background:var(--deep)">
+  <div class="sdiv-dots"><span>·</span><span>·</span><span>·</span></div>
+  <span class="sdiv-arrow l">↗</span>
+  <span class="sdiv-text">content with intention</span>
+  <span class="sdiv-arrow r">↗</span>
+</div>
+
+<!-- ── ABOUT ── -->
+<section class="about">
+  <div class="about-left">
+    <div class="eyebrow reveal">About</div>
+    <h2 class="about-h reveal reveal-d1">The Mind<br>Behind the <em>Frame.</em></h2>
+    <div class="about-body reveal reveal-d2">
+      <p>Brand worlds are built from the brief to the final frame. At the intersection of psychology and aesthetics — creating content that does not just look right but feels right to the people it reaches.</p>
+      <p>At Sommer Beauty, end-to-end content ownership across a premium clean beauty brand. Moodboarding, visual direction, commercial negotiation with videographers, photographers and editors, and every creative decision in between.</p>
+      <p>Now Dubai-based, bringing the same precision to premium and luxury brands that understand the difference between content and communication.</p>
+    </div>
+  </div>
+  <div class="about-right">
+    <div class="stats reveal">
+      <div><div class="stat-n">10+</div><div class="stat-l">Months at Sommer Beauty</div></div>
+      <div><div class="stat-n">3×</div><div class="stat-l">Blogs per week</div></div>
+      <div><div class="stat-n">2×</div><div class="stat-l">LinkedIn weekly</div></div>
+      <div><div class="stat-n">5+</div><div class="stat-l">Brands worked with</div></div>
+    </div>
+    <div class="tags reveal reveal-d2">
+      <span class="tag">Premium Beauty</span>
+      <span class="tag">UAE Golden Visa</span>
+      <span class="tag">FAD Dubai</span>
+      <span class="tag">Psychology</span>
+      <span class="tag">Dubai Ready</span>
+      <span class="tag">LBM 2026</span>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION DIV -->
+<div class="sdiv" style="background:var(--black)">
+  <div class="sdiv-dots"><span>·</span><span>·</span><span>·</span></div>
+  <span class="sdiv-arrow l">↗</span>
+  <span class="sdiv-text">selected work</span>
+  <span class="sdiv-arrow r">↗</span>
+</div>
+
+<!-- ── WORK ── -->
+<section class="work" id="work">
+  <div class="work-header reveal">
+    <div class="eyebrow">Sommer Beauty · 2025 — 2026</div>
+    <h2 class="work-h">Content<br><em>in Motion.</em></h2>
+    <p class="work-sub">Films produced, directed and coordinated from brief to final frame. Visual strategy and storytelling for a premium clean beauty brand.</p>
+  </div>
+
+  <!-- VIDEO SECTION -->
+  <div class="video-section">
+
+    <!-- Trendy Content + BTS side by side 9:16 -->
+    <div class="video-row-top reveal">
+      <div class="vcard portrait" >
+        <iframe src="https://drive.google.com/file/d/1To1Aiy7agOLktXbzVs3GC59ADwloEoHi/preview" allow="autoplay" allowfullscreen style="position:absolute;inset:0;width:100%;height:100%;border:none"></iframe>
+        <div class="vcard-overlay"></div>
+        <div class="vcard-info">
+          <p class="vcard-tag">001 · Trending Content</p>
+          <p class="vcard-title">Trendy format, brand voice</p>
+        </div>
+      </div>
+      <div class="vcard portrait" >
+        <iframe src="https://drive.google.com/file/d/1neJStmx-Lr1NqiQ93eTzrVy_b4ZHuqmT/preview" allow="autoplay" allowfullscreen style="position:absolute;inset:0;width:100%;height:100%;border:none"></iframe>
+        <div class="vcard-overlay"></div>
+        <div class="vcard-info">
+          <p class="vcard-tag">002 · Ad Video</p>
+          <p class="vcard-title">Paid social creative, performance-led</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- OOO 16:9 full width -->
+    <div class="reveal" style="margin-top:3px">
+      <div class="vcard wide">
+        <iframe src="https://drive.google.com/file/d/1pCG_DE5lqvMsehDOEym4x2LJGU07aJHg/preview" allow="autoplay" allowfullscreen style="position:absolute;inset:0;width:100%;height:100%;border:none"></iframe>
+        <div class="vcard-overlay"></div>
+        <div class="vcard-info">
+          <p class="vcard-tag">003 · EGC · Out of Office</p>
+          <p class="vcard-title">Team content, authentic brand storytelling</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Influencer + BTS side by side 9:16 -->
+    <div class="video-row-top reveal" style="margin-top:3px">
+      <div class="vcard portrait" >
+        <iframe src="https://drive.google.com/file/d/1OMKErNGniGHbVQLmt7tp-AxoLxOapGfX/preview" allow="autoplay" allowfullscreen style="position:absolute;inset:0;width:100%;height:100%;border:none"></iframe>
+        <div class="vcard-overlay"></div>
+        <div class="vcard-info">
+          <p class="vcard-tag">004 · Influencer Event</p>
+          <p class="vcard-title">Event coverage, community building</p>
+        </div>
+      </div>
+      <div class="vcard portrait" >
+        <iframe src="https://drive.google.com/file/d/1Ecc-fAym03gXr1ySCMGL1QCxy6akzwM8/preview" allow="autoplay" allowfullscreen style="position:absolute;inset:0;width:100%;height:100%;border:none"></iframe>
+        <div class="vcard-overlay"></div>
+        <div class="vcard-info">
+          <p class="vcard-tag">005 · BTS</p>
+          <p class="vcard-title">Behind the scenes, shoot day</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- FOUNDER FILM — separate, centred, statement piece -->
+    <div class="reveal founder-feature" style="margin-top:3rem">
+      <div class="eyebrow" style="margin-bottom:1.5rem;justify-content:center">Founder Film</div>
+      <div style="display:flex;justify-content:center">
+        <div class="vcard portrait" style="width:50%">
+        <iframe src="https://www.youtube.com/embed/5F-qPbiGUGU?autoplay=1&mute=1&loop=1&playlist=5F-qPbiGUGU" allow="autoplay" allowfullscreen style="position:absolute;inset:0;width:100%;height:100%;border:none"></iframe>
+        <div class="vcard-overlay"></div>
+        <div class="vcard-info">
+          <p class="vcard-tag">Founder Film · Sommer Beauty</p>
+          <p class="vcard-title">Brand origin story, visual direction & production</p>
+        </div>
+      </div>
+      </div>
+      <div style="text-align:center;margin-top:1.5rem;padding:0 5rem">
+        <p style="font-family:'Cormorant Garamond',serif;font-size:1.05rem;font-style:italic;font-weight:300;color:var(--muted);line-height:1.9">Visually directed and produced end-to-end — from brief to final cut. Coordinated with videographer and editor to bring the founder's story to life.</p>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- SECTION DIV -->
+  <div class="sdiv reveal" style="background:var(--black);padding:3rem 0">
+    <div class="sdiv-dots"><span>·</span><span>·</span><span>·</span></div>
+    <span class="sdiv-arrow l">↗</span>
+    <span class="sdiv-text">campaigns & creatives</span>
+    <span class="sdiv-arrow r">↗</span>
+  </div>
+
+  <!-- CAMPAIGN GRID -->
+  <div class="campaign-section reveal">
+    <div class="eyebrow" style="margin-bottom:2rem">Festive Campaigns · 2025</div>
+    <!-- Row 1: Christmas + Diwali(4:5) + Valentine's -->
+    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:3px;margin-bottom:3px">
+      <div class="ccard" style="aspect-ratio:9/16">
+        <img src="https://drive.google.com/thumbnail?id=1FfMuiTQq_6CqTual8eQ1StxCI9Jt219Y&sz=w1200" alt="Christmas Campaign">
+        <div class="ccard-label"><p class="ccard-tag">Christmas</p><p class="ccard-name">Festive Campaign 2025</p></div>
+      </div>
+      <div class="ccard" style="aspect-ratio:4/5">
+        <img src="https://drive.google.com/thumbnail?id=1CPQSZyZuYL_2JaMDf6VGQf-BPFm6a6MD&sz=w1200" alt="Diwali Campaign">
+        <div class="ccard-label"><p class="ccard-tag">Diwali</p><p class="ccard-name">Festival of Light Campaign</p></div>
+      </div>
+      <div class="ccard" style="aspect-ratio:9/16">
+        <img src="https://drive.google.com/thumbnail?id=1vgE_0FJrkJlIBy1NMEhZdzdCzp0HeaQ9&sz=w1200" alt="Valentine's Campaign">
+        <div class="ccard-label"><p class="ccard-tag">Valentine's</p><p class="ccard-name">Love Campaign 2025</p></div>
+      </div>
+    </div>
+    <!-- Under a Minute 9:16 centred -->
+    <div style="display:flex;justify-content:center;background:var(--black)">
+      <div class="vcard portrait" style="width:33.33%">
+        <img class="vcard-poster" src="https://drive.google.com/thumbnail?id=1qIDfGyU8dYfoygHfdy4BJCoPEiweYftr&sz=w1200" alt="Short-form campaign series">
+        <div class="vcard-play-btn" onclick="playVid(this,'https://drive.google.com/file/d/1qIDfGyU8dYfoygHfdy4BJCoPEiweYftr/preview')">▶</div>
+        <div class="vcard-overlay"></div>
+        <div class="vcard-info">
+          <p class="vcard-tag">Under A Minute</p>
+          <p class="vcard-title">Short-form campaign series</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- META ADS -->
+  <div class="reveal" style="margin-bottom:8rem">
+    <div class="eyebrow" style="margin-bottom:2rem">Meta Ad Creatives</div>
+    <div class="ads-grid">
+      <div class="ad-item"><img src="https://drive.google.com/thumbnail?id=1TjmX6_vczvtBT2X2hjNCMzUO2Dp1QzAG&sz=w1200" alt="Meta Ad 1"></div>
+      <div class="ad-item"><img src="https://drive.google.com/thumbnail?id=1AH441pEs5dEFoGHr0VOKLJpMJ3uh5gXF&sz=w1200" alt="Meta Ad 2"></div>
+      <div class="ad-item"><img src="https://drive.google.com/thumbnail?id=1aqQDDx9tdEhzN1GFEqDTummZ7JyqSrCf&sz=w1200" alt="Meta Ad 3"></div>
+    </div>
+  </div>
+
+  <!-- CLEAN BEAUTY CAROUSEL 4:5 -->
+  <div class="carousel-section reveal">
+    <div class="eyebrow" style="margin-bottom:2rem">Clean Beauty · Visual Identity</div>
+    <div style="display:flex;justify-content:center">
+      <div class="carousel-outer" style="background:var(--mid);width:420px;max-width:100%">
+        <div class="carousel-track" id="c-beauty">
+          <div class="carousel-slide"><img style="width:100%;aspect-ratio:4/5;object-fit:cover;display:block;max-height:520px" src="https://drive.google.com/thumbnail?id=1rKyDXBHaTiJzNnfMcNCDRj0_wCS6eVYw&sz=w1200" alt="Clean Beauty 1"></div>
+          <div class="carousel-slide"><img style="width:100%;aspect-ratio:4/5;object-fit:cover;display:block;max-height:520px" src="https://drive.google.com/thumbnail?id=1hT2UfaVbDzllfFnXTEuGqV2bMhz_UxtU&sz=w1200" alt="Clean Beauty 2"></div>
+          <div class="carousel-slide"><img style="width:100%;aspect-ratio:4/5;object-fit:cover;display:block;max-height:520px" src="https://drive.google.com/thumbnail?id=1ulmRQvJWYcWzTEfP0vQPoTsvnm6r9_3C&sz=w1200" alt="Clean Beauty 3"></div>
+          <div class="carousel-slide"><img style="width:100%;aspect-ratio:4/5;object-fit:cover;display:block;max-height:520px" src="https://drive.google.com/thumbnail?id=12QDsCQFdOUKnqurvLXryUGmfSrInuDT2&sz=w1200" alt="Clean Beauty 4"></div>
+        </div>
+        <button class="c-btn prev" onclick="cs('c-beauty',4,-1)">‹</button>
+        <button class="c-btn next" onclick="cs('c-beauty',4,1)">›</button>
+        <div class="carousel-dots" id="d-beauty"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- EGC + FOUNDER EDIT row -->
+  <div class="reveal" style="margin-bottom:8rem">
+    <div class="eyebrow" style="margin-bottom:2rem">EGC & Shoot Direction</div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:3px">
+      <div class="ccard" style="aspect-ratio:4/5">
+        <img src="https://drive.google.com/thumbnail?id=1yuaszsQPfaxvtrixsWP8VNZr0fAvASec&sz=w1200" alt="EGC">
+        <div class="ccard-label"><p class="ccard-tag">EGC · Employee Generated</p><p class="ccard-name">Authentic brand presence</p></div>
+      </div>
+      <div class="ccard" style="aspect-ratio:4/5">
+        <img src="https://drive.google.com/thumbnail?id=1j3Gb8TcR6McFvUOlUkQw-VI3qWaMTQS4&sz=w1200" alt="Founder Edit">
+        <div class="ccard-label"><p class="ccard-tag">Founder Video Edit</p><p class="ccard-name">Short-form, visual direction</p></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- BLOG -->
+  <div class="reveal" style="margin-bottom:8rem">
+    <div class="eyebrow" style="margin-bottom:2rem">Content Writing · SEO Blogs</div>
+    <a href="https://sommerbeauty.in/blogs/journal/on-the-go-makeup-touch-ups-the-only-products-you-actually-need-1" target="_blank" class="blog-card">
+      <div>
+        <p class="blog-label">Sommer Beauty Blog</p>
+        <p class="blog-title">On-The-Go Makeup Touch-Ups: The Only Products You Actually Need</p>
+        <p class="blog-link">Read on sommerbeauty.in →</p>
+      </div>
+      <div class="blog-arrow">→</div>
+    </a>
+  </div>
+
+  <!-- SOCIAL MENTION -->
+  <div class="social-mention reveal">
+    <div class="social-mention-icon">◎</div>
+    <p class="social-mention-text">Further work including moodboards, AI-assisted visuals, website updates, and trending content is visible across the Sommer Beauty digital presence — on Instagram and on the brand website.</p>
+    <div class="social-mention-links">
+      <a href="https://www.instagram.com/sommerbeautyindia" target="_blank" class="social-link">@sommerbeautyindia</a>
+      <a href="https://sommerbeauty.in" target="_blank" class="social-link">sommerbeauty.in</a>
+    </div>
+  </div>
+
+</section>
+
+<!-- SECTION DIV -->
+<div class="sdiv" style="background:var(--black)">
+  <div class="sdiv-dots"><span>·</span><span>·</span><span>·</span></div>
+  <span class="sdiv-arrow l">↗</span>
+  <span class="sdiv-text">the journey</span>
+  <span class="sdiv-arrow r">↗</span>
+</div>
+
+<!-- ── EXPERIENCE ── -->
+<section class="exp" id="exp">
+  <div class="exp-left">
+    <div class="eyebrow reveal">Timeline</div>
+    <h2 class="exp-h reveal reveal-d1">Work<br><em>Experience.</em></h2>
+    <div class="exp-bg">3+</div>
+  </div>
+  <div class="exp-right">
+    <div class="exp-item reveal">
+      <p class="exp-period">Jul 2025 — May 2026</p>
+      <p class="exp-role">Social Media Executive</p>
+      <p class="exp-co">Sommer Beauty · Chennai, India</p>
+      <ul class="exp-pts">
+        <li>Owned content strategy, visual direction, and campaign execution end to end for a premium clean beauty brand</li>
+        <li>Managed production, negotiating commercials with videographers, photographers, editors, and web developers</li>
+        <li>Directed the founder-led brand video and applied psychology and sensory marketing to drive emotional engagement</li>
+        <li>Coordinated EGC shoots, influencer events, festive campaigns, and product launches</li>
+        <li>Maintained 3 SEO blogs per week and 2 LinkedIn posts per week consistently</li>
+      </ul>
+    </div>
+    <div class="exp-item reveal reveal-d1">
+      <p class="exp-period">Feb — Jun 2025</p>
+      <p class="exp-role">Co-Author & Creative Mentor</p>
+      <p class="exp-co">Teach for India × The Hive · Chennai</p>
+      <ul class="exp-pts">
+        <li>Co-authored a published book with an under-resourced child from ideation to final release</li>
+        <li>Applied psychology and emotional storytelling to shape authentic, impactful content</li>
+      </ul>
+    </div>
+    <div class="exp-item reveal reveal-d1">
+      <p class="exp-period">May 2024</p>
+      <p class="exp-role">Brand Strategy & Marketing Intern</p>
+      <p class="exp-co">Puma Corporate Experience · Remote</p>
+      <ul class="exp-pts">
+        <li>Analysed global campaigns and consumer behaviour for brand positioning</li>
+        <li>Developed and presented marketing strategy based on research and business objectives</li>
+      </ul>
+    </div>
+    <div class="exp-item reveal reveal-d1">
+      <p class="exp-period">May — Jun 2023</p>
+      <p class="exp-role">Backstage Intern</p>
+      <p class="exp-co">The Hive · Dubai, UAE</p>
+      <ul class="exp-pts">
+        <li>Supported live show operations, backstage coordination, and audience management in Dubai</li>
+      </ul>
+    </div>
+    <div class="exp-item reveal reveal-d1">
+      <p class="exp-period">Aug — Sep 2022</p>
+      <p class="exp-role">Sales Attendant</p>
+      <p class="exp-co">The Old Library · Dubai, UAE</p>
+      <ul class="exp-pts">
+        <li>Customer-facing role in a premium Dubai book and lifestyle space</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION DIV -->
+<div class="sdiv" style="background:var(--deep)">
+  <div class="sdiv-dots"><span>·</span><span>·</span><span>·</span></div>
+  <span class="sdiv-arrow l">↗</span>
+  <span class="sdiv-text">education & credentials</span>
+  <span class="sdiv-arrow r">↗</span>
+</div>
+
+<!-- ── EDUCATION ── -->
+<section class="edu">
+  <div class="eyebrow reveal">Education</div>
+  <h2 class="about-h reveal reveal-d1" style="font-family:'Cormorant Garamond',serif;font-size:clamp(2.8rem,4vw,5rem);font-weight:300;letter-spacing:-0.02em;margin-bottom:0">Built for <em style="font-style:italic;color:var(--cream2)">Luxury.</em></h2>
+  <div class="edu-grid">
+    <div class="edu-card reveal">
+      <div class="edu-yr">2026</div>
+      <p class="edu-deg">BSc. Psychology</p>
+      <p class="edu-inst">SRM Institute of Science and Technology · Chennai, India</p>
+      <p class="edu-note">Expected First Class with Distinction</p>
+    </div>
+    <div class="edu-card reveal reveal-d1">
+      <div class="edu-yr">2026</div>
+      <p class="edu-deg">Luxury Brand Management</p>
+      <p class="edu-inst">FAD Institute of Luxury Fashion & Style · Dubai, UAE</p>
+      <p class="edu-note">Enrolling June 2026 · UAE Golden Visa Holder</p>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION DIV -->
+<div class="sdiv" style="background:var(--black)">
+  <div class="sdiv-dots"><span>·</span><span>·</span><span>·</span></div>
+  <span class="sdiv-arrow l">↗</span>
+  <span class="sdiv-text">let's create together</span>
+  <span class="sdiv-arrow r">↗</span>
+</div>
+
+<!-- ── CONTACT ── -->
+<section class="contact" id="contact">
+  <div class="contact-left">
+    <div class="eyebrow reveal">Contact</div>
+    <h2 class="contact-h reveal reveal-d1">Let's<br>work <em>together.</em></h2>
+    <p class="contact-sub reveal reveal-d2">Available for social media, content, and creative roles within premium beauty and luxury lifestyle brands. Dubai · Middle East · Open to relocation.</p>
+    <div class="clinks reveal reveal-d3">
+      <a href="mailto:nehasrijith@rediffmail.com" class="clink">
+        <div class="clink-icon">✉</div>nehasrijith@rediffmail.com
+      </a>
+      <a href="tel:+971543272605" class="clink">
+        <div class="clink-icon">✆</div>+971 543 272 605 (UAE)
+      </a>
+      <a href="tel:+917010834778" class="clink">
+        <div class="clink-icon">✆</div>+91 701 083 4778 (India)
+      </a>
+      <a href="https://linkedin.com/in/neha-nair-a588a7252" target="_blank" class="clink">
+        <div class="clink-icon">in</div>linkedin.com/in/neha-nair-a588a7252
+      </a>
+    </div>
+  </div>
+  <div class="contact-right">
+    <div class="contact-img-wrap">
+      <img src="https://drive.google.com/thumbnail?id=1Q3IMA1skf52zk165rFOzerTdozdzsfnZ&sz=w1200" alt="Neha Nair">
+      <div class="contact-img-overlay">
+        <p class="contact-img-name">Neha Nair</p>
+        <p class="contact-img-role">Social Media Executive · Dubai</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <span class="footer-l">Neha Nair · Portfolio 2026</span>
+  <span class="footer-r">Social Media & Content Marketing</span>
+</footer>
+
+<script>
+
+// CURSOR
+const cur = document.getElementById('cur');
+const curRing = document.getElementById('curRing');
+document.addEventListener('mousemove', e => {
+  cur.style.left = e.clientX + 'px'; cur.style.top = e.clientY + 'px';
+  curRing.style.left = e.clientX + 'px'; curRing.style.top = e.clientY + 'px';
+});
+
+// NAV SCROLL
+const nav = document.getElementById('nav');
+window.addEventListener('scroll', () => {
+  nav.classList.toggle('scrolled', window.scrollY > 60);
+});
+
+// SCROLL REVEAL
+const obs = new IntersectionObserver(entries => {
+  entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('in'); });
+}, { threshold: 0.1 });
+document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+
+// CAROUSEL
+const state = {};
+function initC(id, total) {
+  state[id] = 0;
+  const dotsEl = document.getElementById('d-' + id.replace('c-',''));
+  if(dotsEl) {
+    dotsEl.innerHTML = '';
+    for(let i=0;i<total;i++){
+      const d = document.createElement('div');
+      d.className = 'dot' + (i===0?' active':'');
+      d.onclick = () => goC(id,total,i);
+      dotsEl.appendChild(d);
+    }
+  }
+  auto(id, total);
+}
+function goC(id, total, idx) {
+  state[id] = (idx + total) % total;
+  document.getElementById(id).style.transform = `translateX(-${state[id]*100}%)`;
+  const dotsEl = document.getElementById('d-' + id.replace('c-',''));
+  if(dotsEl) Array.from(dotsEl.children).forEach((d,i) => d.className = 'dot'+(i===state[id]?' active':''));
+}
+function cs(id, total, dir) { goC(id, total, state[id] + dir); }
+function auto(id, total) { setInterval(() => goC(id, total, state[id]+1), 3200); }
+initC('c-beauty', 4);
+</script>
+</body>
+</html>
