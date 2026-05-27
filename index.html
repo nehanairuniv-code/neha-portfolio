@@ -540,6 +540,85 @@ footer {
   .blog-card{flex-direction:column;gap:1.5rem}
   .blog-arrow{margin-left:0}
 }
+
+/* ── MOBILE FIXES ── */
+@media(max-width:768px){
+  /* Mobile photo block */
+  .mobile-hero-photo {
+    display:block;
+    position:relative;
+    aspect-ratio:3/4;
+    overflow:hidden;
+    background:var(--mid);
+  }
+  .mobile-hero-photo img {
+    width:100%;height:100%;object-fit:cover;opacity:0.8;
+  }
+  .mobile-hero-overlay {
+    position:absolute;bottom:0;left:0;right:0;
+    padding:1.5rem 2rem;
+    background:linear-gradient(to top,rgba(18,9,9,0.85) 0%,transparent 100%);
+  }
+  .mobile-hero-name {
+    font-family:'Cormorant Garamond',serif;
+    font-size:1.4rem;font-weight:300;font-style:italic;color:var(--cream);
+  }
+  .mobile-hero-role {
+    font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-top:4px;
+  }
+
+  /* Hide arrows in dividers on mobile */
+  .sdiv-arrow { display:none !important; }
+
+  /* Reduce section padding on mobile */
+  .work { padding:4rem 1.5rem; }
+  .about-left,.about-right { padding:3.5rem 1.5rem; }
+  .exp-left,.exp-right { padding:2.5rem 1.5rem; }
+  .edu { padding:3.5rem 1.5rem; }
+  .contact-left { padding:3.5rem 1.5rem; }
+  footer { padding:1.5rem; }
+
+  /* Huesicle grid — 2 cols on mobile */
+  .reveal [style*="repeat(4,1fr)"] {
+    grid-template-columns: 1fr 1fr !important;
+  }
+
+  /* Story creatives — 3 cols on mobile */
+  .reveal [style*="repeat(6,1fr)"] {
+    grid-template-columns: repeat(3,1fr) !important;
+  }
+
+  /* Fix about body em dash */
+  .about-body { font-size:1rem; line-height:1.9; }
+
+  /* Video row — single col */
+  .video-row-top { grid-template-columns:1fr !important; }
+
+  /* Campaign grid single col */
+  .campaign-section > div > div[style*="grid-template-columns:1fr 1fr 1fr"] {
+    grid-template-columns:1fr !important;
+  }
+
+  /* EGC 3 tiles — single col on mobile */
+  .reveal > div[style*="repeat(3,1fr)"] {
+    grid-template-columns:1fr !important;
+  }
+
+  /* Founder centred */
+  .founder-feature > div > div[style*="width:50%"] {
+    width:100% !important;
+  }
+
+  /* Reduce section margin */
+  .reveal[style*="margin-bottom:8rem"] {
+    margin-bottom:4rem !important;
+  }
+}
+
+/* Hide mobile photo on desktop */
+@media(min-width:769px){
+  .mobile-hero-photo { display:none; }
+}
 </style>
 </head>
 <body>
@@ -606,6 +685,15 @@ footer {
   </div>
 </div>
 
+
+<!-- MOBILE PHOTO — only visible on small screens -->
+<div class="mobile-hero-photo">
+  <img src="https://drive.google.com/thumbnail?id=1Q3IMA1skf52zk165rFOzerTdozdzsfnZ&sz=w1200" alt="Neha Nair">
+  <div class="mobile-hero-overlay">
+    <p class="mobile-hero-name">Neha Nair</p>
+    <p class="mobile-hero-role">Social Media Executive · Dubai</p>
+  </div>
+</div>
 <!-- SECTION DIV -->
 <div class="sdiv" style="background:var(--deep)">
   <div class="sdiv-dots"><span>·</span><span>·</span><span>·</span></div>
@@ -620,7 +708,7 @@ footer {
     <div class="eyebrow reveal">About</div>
     <h2 class="about-h reveal reveal-d1">The Mind<br>Behind the <em>Frame.</em></h2>
     <div class="about-body reveal reveal-d2">
-      <p>Brand worlds are built from the brief to the final frame. At the intersection of psychology and aesthetics — creating content that does not just look right but feels right to the people it reaches.</p>
+      <p>Brand worlds are built from the brief to the final frame. At the intersection of psychology and aesthetics, creating content that does not just look right but feels right to the people it reaches.</p>
       <p>At Sommer Beauty, end-to-end content ownership across a premium clean beauty brand. Moodboarding, visual direction, commercial negotiation with videographers, photographers and editors, and every creative decision in between.</p>
       <p>Now Dubai-based, bringing the same precision to premium and luxury brands that understand the difference between content and communication.</p>
     </div>
@@ -1040,6 +1128,15 @@ footer {
   </div>
 </section>
 
+
+<!-- MOBILE PHOTO — only visible on small screens -->
+<div class="mobile-hero-photo">
+  <img src="https://drive.google.com/thumbnail?id=1Q3IMA1skf52zk165rFOzerTdozdzsfnZ&sz=w1200" alt="Neha Nair">
+  <div class="mobile-hero-overlay">
+    <p class="mobile-hero-name">Neha Nair</p>
+    <p class="mobile-hero-role">Social Media Executive · Dubai</p>
+  </div>
+</div>
 <!-- SECTION DIV -->
 <div class="sdiv" style="background:var(--deep)">
   <div class="sdiv-dots"><span>·</span><span>·</span><span>·</span></div>
