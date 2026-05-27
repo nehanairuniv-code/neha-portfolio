@@ -752,19 +752,30 @@ footer {
       </div>
     </div>
 
-    <!-- FOUNDER FILM — separate statement piece -->
+        <!-- FOUNDER FILM — separate statement piece -->
     <div class="reveal founder-feature" style="margin-top:3rem">
       <div class="eyebrow" style="margin-bottom:1.5rem;justify-content:center">Founder Film</div>
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:3px">
-        <div class="vcard portrait">
-        <div id="ytplayer6" class="yt-player-div" data-ytid="5F-qPbiGUGU" style="position:absolute;inset:0;width:100%;height:100%;cursor:pointer">
-        <img src="https://img.youtube.com/vi/5F-qPbiGUGU/maxresdefault.jpg" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0.85" onerror="this.src='https://img.youtube.com/vi/5F-qPbiGUGU/hqdefault.jpg'" alt="video">
+      <div style="display:flex;justify-content:center">
+        <div class="vcard portrait" style="width:50%">
+        <div id="ytplayer-founder" class="yt-player-div" data-ytid="5F-qPbiGUGU" style="position:absolute;inset:0;width:100%;height:100%;cursor:pointer">
+        <img src="https://img.youtube.com/vi/5F-qPbiGUGU/maxresdefault.jpg" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0.85" onerror="this.src='https://img.youtube.com/vi/5F-qPbiGUGU/hqdefault.jpg'" alt="Founder Film">
         <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;z-index:3">
-          <div style="width:56px;height:56px;background:rgba(255,0,0,0.9);border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer" onclick="loadYT('ytplayer6','5F-qPbiGUGU')">
+          <div style="width:56px;height:56px;background:rgba(255,0,0,0.9);border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer" onclick="loadYT('ytplayer-founder','5F-qPbiGUGU')">
             <div style="width:0;height:0;border-style:solid;border-width:10px 0 10px 20px;border-color:transparent transparent transparent #fff;margin-left:4px"></div>
           </div>
         </div>
+        </div>
+        <div class="vcard-overlay"></div>
+        <div class="vcard-info">
+          <p class="vcard-tag">Founder Film · Sommer Beauty</p>
+          <p class="vcard-title">Brand origin story, visual direction & production</p>
+        </div>
+        </div>
       </div>
+      <div style="text-align:center;margin-top:1.5rem;padding:0 5rem">
+        <p style="font-family:'Cormorant Garamond',serif;font-size:1.05rem;font-style:italic;font-weight:300;color:var(--muted);line-height:1.9">Visually directed and produced end-to-end — from brief to final cut.</p>
+      </div>
+    </div>
         <div class="vcard-overlay"></div>
         <div class="vcard-info">
           <p class="vcard-tag">Founder Film</p>
@@ -836,16 +847,24 @@ footer {
         <div class="vcard-info"><p class="vcard-tag">Valentine's</p><p class="vcard-title">Love Campaign 2025</p></div>
       </div>
     </div>
-    <!-- Under a Minute 9:16 centred -->
-    <div style="display:flex;justify-content:center;background:var(--black);margin-top:3px">
-      <div class="vcard portrait" style="width:33.33%">
-        <div id="ytplayer10" class="yt-player-div" data-ytid="2VYgdn2gX_M" style="position:absolute;inset:0;width:100%;height:100%;cursor:pointer">
-        <img src="https://img.youtube.com/vi/2VYgdn2gX_M/maxresdefault.jpg" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0.85" onerror="this.src='https://img.youtube.com/vi/2VYgdn2gX_M/hqdefault.jpg'" alt="video">
+        <!-- Under a Minute 9:16 — flush with campaign row -->
+    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:3px;margin-top:3px">
+      <div style="background:var(--black)"></div>
+      <div class="vcard portrait">
+        <div id="ytplayer-undermin" class="yt-player-div" data-ytid="2VYgdn2gX_M" style="position:absolute;inset:0;width:100%;height:100%;cursor:pointer">
+        <img src="https://img.youtube.com/vi/2VYgdn2gX_M/maxresdefault.jpg" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0.85" onerror="this.src='https://img.youtube.com/vi/2VYgdn2gX_M/hqdefault.jpg'" alt="Under A Minute">
         <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;z-index:3">
-          <div style="width:56px;height:56px;background:rgba(255,0,0,0.9);border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer" onclick="loadYT('ytplayer10','2VYgdn2gX_M')">
+          <div style="width:56px;height:56px;background:rgba(255,0,0,0.9);border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer" onclick="loadYT('ytplayer-undermin','2VYgdn2gX_M')">
             <div style="width:0;height:0;border-style:solid;border-width:10px 0 10px 20px;border-color:transparent transparent transparent #fff;margin-left:4px"></div>
           </div>
         </div>
+        </div>
+        <div class="vcard-overlay"></div>
+        <div class="vcard-info"><p class="vcard-tag">Under A Minute</p><p class="vcard-title">Short-form campaign series</p></div>
+      </div>
+      <div style="background:var(--black)"></div>
+    </div>
+    </div>
       </div>
         <div class="vcard-overlay"></div>
         <div class="vcard-info"><p class="vcard-tag">Under A Minute</p><p class="vcard-title">Short-form campaign series</p></div>
@@ -902,6 +921,22 @@ footer {
         <div class="vcard-overlay"></div>
         <div class="vcard-info"><p class="vcard-tag">EGC · Put a Finger Down</p><p class="vcard-title">Trend format, brand participation</p></div>
       </div>
+    </div>
+  </div>
+
+  <!-- STORY CREATIVES -->
+  <div class="reveal" style="margin-bottom:8rem">
+    <div class="eyebrow" style="margin-bottom:2rem">Story Creatives</div>
+    <div style="display:grid;grid-template-columns:repeat(6,1fr);gap:3px">
+      <div class="ad-item" style="aspect-ratio:9/16"><img src="https://drive.google.com/thumbnail?id=1pDQ72tjHzMYS951cD2WwewnBcKEIiRi2&sz=w1200" alt="Story Creative 1" style="width:100%;height:100%;object-fit:cover;opacity:0.85;transition:transform 0.5s,opacity 0.3s"></div><div class="ad-item" style="aspect-ratio:9/16"><img src="https://drive.google.com/thumbnail?id=1fIxjUTL-Q2FUgqpDcQHOUbVDEFCke0WM&sz=w1200" alt="Story Creative 2" style="width:100%;height:100%;object-fit:cover;opacity:0.85;transition:transform 0.5s,opacity 0.3s"></div><div class="ad-item" style="aspect-ratio:9/16"><img src="https://drive.google.com/thumbnail?id=1JqKPfcHEG_q3W3QKaLMlMve8MZ3QLjDh&sz=w1200" alt="Story Creative 3" style="width:100%;height:100%;object-fit:cover;opacity:0.85;transition:transform 0.5s,opacity 0.3s"></div><div class="ad-item" style="aspect-ratio:9/16"><img src="https://drive.google.com/thumbnail?id=1gp_hsDJ0qKGD68r0T5xxjIyjR73Bpdcb&sz=w1200" alt="Story Creative 4" style="width:100%;height:100%;object-fit:cover;opacity:0.85;transition:transform 0.5s,opacity 0.3s"></div><div class="ad-item" style="aspect-ratio:9/16"><img src="https://drive.google.com/thumbnail?id=1scX4XMWKFyq0P6qDESD72A1jNHoNoRZI&sz=w1200" alt="Story Creative 5" style="width:100%;height:100%;object-fit:cover;opacity:0.85;transition:transform 0.5s,opacity 0.3s"></div><div class="ad-item" style="aspect-ratio:9/16"><img src="https://drive.google.com/thumbnail?id=1UuF3jX6e9SFc3qIFHOAR-o5o_zzuOWkj&sz=w1200" alt="Story Creative 6" style="width:100%;height:100%;object-fit:cover;opacity:0.85;transition:transform 0.5s,opacity 0.3s"></div>
+    </div>
+  </div>
+
+  <!-- LIFESTYLE SHOOTS -->
+  <div class="reveal" style="margin-bottom:8rem">
+    <div class="eyebrow" style="margin-bottom:2rem">Lifestyle Shoots</div>
+    <div style="display:grid;grid-template-columns:1fr 2fr 1fr 1fr;gap:3px;align-items:start">
+      <div class="ccard" style="aspect-ratio:9/16"><img src="https://drive.google.com/thumbnail?id=1eD9ik45LcnRAMabEmDb27P9OgiTakQHE&sz=w1200" alt="Lifestyle" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0.85;transition:transform 0.5s,opacity 0.3s"><div class="ccard-label"><p class="ccard-tag">Lifestyle</p><p class="ccard-name">Shoot Direction</p></div></div><div class="ccard" style="aspect-ratio:16/9"><img src="https://drive.google.com/thumbnail?id=1iLPAZyqa8l1GiYxfviuegmRn-WJmZXiy&sz=w1200" alt="Lifestyle" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0.85;transition:transform 0.5s,opacity 0.3s"><div class="ccard-label"><p class="ccard-tag">Lifestyle</p><p class="ccard-name">Shoot Direction</p></div></div><div class="ccard" style="aspect-ratio:9/16"><img src="https://drive.google.com/thumbnail?id=17IfztgO8JPR0ed6KhnPRfhRol9D4Eo7C&sz=w1200" alt="Lifestyle" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0.85;transition:transform 0.5s,opacity 0.3s"><div class="ccard-label"><p class="ccard-tag">Lifestyle</p><p class="ccard-name">Shoot Direction</p></div></div><div class="ccard" style="aspect-ratio:9/16"><img src="https://drive.google.com/thumbnail?id=1cdX2zFUC-FibLJ0Dl1VtlmgSQznb5Yz-&sz=w1200" alt="Lifestyle" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0.85;transition:transform 0.5s,opacity 0.3s"><div class="ccard-label"><p class="ccard-tag">Lifestyle</p><p class="ccard-name">Shoot Direction</p></div></div>
     </div>
   </div>
 
@@ -1072,7 +1107,8 @@ footer {
 
 function loadYT(divId, ytId) {
   var div = document.getElementById(divId);
-  div.innerHTML = '<iframe style="position:absolute;inset:0;width:100%;height:100%;border:none" src="https://www.youtube.com/embed/' + ytId + '?autoplay=1&rel=0&modestbranding=1&playsinline=1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
+  div.innerHTML = '<iframe style="position:absolute;inset:0;width:100%;height:100%;border:none" src="https://www.youtube.com/embed/' + ytId + '?autoplay=1&rel=0&modestbranding=1&playsinline=1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>' +
+  '<button onclick="loadYT('' + divId + '','' + ytId + '')" style="position:absolute;bottom:1rem;right:1rem;z-index:10;background:rgba(18,9,9,0.7);border:1px solid rgba(243,238,231,0.2);color:var(--cream);font-size:10px;letter-spacing:0.15em;text-transform:uppercase;padding:6px 14px;cursor:pointer;">↺ Replay</button>';
 }
 
 // CURSOR
