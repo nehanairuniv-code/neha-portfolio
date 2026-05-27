@@ -489,6 +489,7 @@ footer {
   filter:blur(4px); transition:opacity 1.2s cubic-bezier(0.22,1,0.36,1), transform 1.2s cubic-bezier(0.22,1,0.36,1), filter 1.2s cubic-bezier(0.22,1,0.36,1);
 }
 .reveal.in { opacity:1; transform:translateY(0); filter:blur(0); }
+.reveal-d1{transition-delay:0.15s}.reveal-d2{transition-delay:0.3s}.reveal-d3{transition-delay:0.45s}
 .reveal-d1 { transition-delay:0.1s; }
 .reveal-d2 { transition-delay:0.22s; }
 .reveal-d3 { transition-delay:0.34s; }
@@ -594,7 +595,6 @@ footer {
     <span class="marquee-item">Brand Storytelling <span class="marquee-sep">✦</span></span>
     <span class="marquee-item">Production Coordination <span class="marquee-sep">✦</span></span>
     <span class="marquee-item">Campaign Ideation <span class="marquee-sep">✦</span></span>
-    <span class="marquee-item">Influencer Marketing <span class="marquee-sep">✦</span></span>
     <span class="marquee-item">Psychology-Led Content <span class="marquee-sep">✦</span></span>
     <span class="marquee-item">Luxury Aesthetics <span class="marquee-sep">✦</span></span>
     <span class="marquee-item">Content Strategy <span class="marquee-sep">✦</span></span>
@@ -603,7 +603,6 @@ footer {
     <span class="marquee-item">Brand Storytelling <span class="marquee-sep">✦</span></span>
     <span class="marquee-item">Production Coordination <span class="marquee-sep">✦</span></span>
     <span class="marquee-item">Campaign Ideation <span class="marquee-sep">✦</span></span>
-    <span class="marquee-item">Influencer Marketing <span class="marquee-sep">✦</span></span>
     <span class="marquee-item">Psychology-Led Content <span class="marquee-sep">✦</span></span>
     <span class="marquee-item">Luxury Aesthetics <span class="marquee-sep">✦</span></span>
   </div>
@@ -752,43 +751,27 @@ footer {
       </div>
     </div>
 
-    <!-- FOUNDER FILM — separate statement piece -->
+    <!-- FOUNDER FILM -->
     <div class="reveal founder-feature" style="margin-top:3rem">
       <div class="eyebrow" style="margin-bottom:1.5rem;justify-content:center">Founder Film</div>
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:3px">
-        <div class="vcard portrait">
-        <div id="ytplayer6" class="yt-player-div" data-ytid="5F-qPbiGUGU" style="position:absolute;inset:0;width:100%;height:100%;cursor:pointer">
-        <img src="https://img.youtube.com/vi/5F-qPbiGUGU/maxresdefault.jpg" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0.85" onerror="this.src='https://img.youtube.com/vi/5F-qPbiGUGU/hqdefault.jpg'" alt="video">
+      <div style="display:flex;justify-content:center">
+        <div style="width:50%">
+          <div class="vcard portrait">
+        <div id="ytplayer-founder" class="yt-player-div" data-ytid="5F-qPbiGUGU" style="position:absolute;inset:0;width:100%;height:100%;cursor:pointer">
+        <img src="https://img.youtube.com/vi/5F-qPbiGUGU/maxresdefault.jpg" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0.85" onerror="this.src='https://img.youtube.com/vi/5F-qPbiGUGU/hqdefault.jpg'" alt="Brand origin story, visual direction & production">
         <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;z-index:3">
-          <div style="width:56px;height:56px;background:rgba(255,0,0,0.9);border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer" onclick="loadYT('ytplayer6','5F-qPbiGUGU')">
+          <div style="width:56px;height:56px;background:rgba(255,0,0,0.9);border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer" onclick="loadYT('ytplayer-founder','5F-qPbiGUGU')">
             <div style="width:0;height:0;border-style:solid;border-width:10px 0 10px 20px;border-color:transparent transparent transparent #fff;margin-left:4px"></div>
           </div>
         </div>
-      </div>
+        </div>
         <div class="vcard-overlay"></div>
-        <div class="vcard-info">
-          <p class="vcard-tag">Founder Film</p>
-          <p class="vcard-title">Brand origin story, visual direction & production</p>
-        </div>
+        <div class="vcard-info"><p class="vcard-tag">Founder Film · Sommer Beauty</p><p class="vcard-title">Brand origin story, visual direction & production</p></div>
       </div>
-        <div class="vcard portrait">
-        <div id="ytplayer7" class="yt-player-div" data-ytid="xHfYamzr7S4" style="position:absolute;inset:0;width:100%;height:100%;cursor:pointer">
-        <img src="https://img.youtube.com/vi/xHfYamzr7S4/maxresdefault.jpg" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0.85" onerror="this.src='https://img.youtube.com/vi/xHfYamzr7S4/hqdefault.jpg'" alt="video">
-        <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;z-index:3">
-          <div style="width:56px;height:56px;background:rgba(255,0,0,0.9);border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer" onclick="loadYT('ytplayer7','xHfYamzr7S4')">
-            <div style="width:0;height:0;border-style:solid;border-width:10px 0 10px 20px;border-color:transparent transparent transparent #fff;margin-left:4px"></div>
-          </div>
         </div>
-      </div>
-        <div class="vcard-overlay"></div>
-        <div class="vcard-info">
-          <p class="vcard-tag">Founder Q&A</p>
-          <p class="vcard-title">Brand voice, founder-led storytelling</p>
-        </div>
-      </div>
       </div>
       <div style="text-align:center;margin-top:1.5rem;padding:0 5rem">
-        <p style="font-family:'Cormorant Garamond',serif;font-size:1.05rem;font-style:italic;font-weight:300;color:var(--muted);line-height:1.9">Visually directed and produced end-to-end — from brief to final cut. Coordinated with videographer and editor to bring the founder's story to life.</p>
+        <p style="font-family:'Cormorant Garamond',serif;font-size:1.05rem;font-style:italic;font-weight:300;color:var(--muted);line-height:1.9">Visually directed and produced end-to-end — from brief to final cut.</p>
       </div>
     </div>
 
@@ -805,50 +788,52 @@ footer {
   <!-- CAMPAIGN GRID -->
   <div class="campaign-section reveal">
     <div class="eyebrow" style="margin-bottom:2rem">Festive Campaigns · 2025</div>
-    <!-- Row 1: Christmas + Diwali(4:5 image) + Valentine's all different ratios -->
-    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:3px;margin-bottom:3px;align-items:start">
-      <div class="vcard portrait">
-        <div id="ytplayer8" class="yt-player-div" data-ytid="Z3kdRSdjnx4" style="position:absolute;inset:0;width:100%;height:100%;cursor:pointer">
-        <img src="https://img.youtube.com/vi/Z3kdRSdjnx4/maxresdefault.jpg" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0.85" onerror="this.src='https://img.youtube.com/vi/Z3kdRSdjnx4/hqdefault.jpg'" alt="video">
+    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:3px">
+      <div style="display:flex;flex-direction:column;gap:3px">
+        <div class="vcard portrait">
+        <div id="ytplayer-xmas" class="yt-player-div" data-ytid="Z3kdRSdjnx4" style="position:absolute;inset:0;width:100%;height:100%;cursor:pointer">
+        <img src="https://img.youtube.com/vi/Z3kdRSdjnx4/maxresdefault.jpg" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0.85" onerror="this.src='https://img.youtube.com/vi/Z3kdRSdjnx4/hqdefault.jpg'" alt="Festive Campaign 2025">
         <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;z-index:3">
-          <div style="width:56px;height:56px;background:rgba(255,0,0,0.9);border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer" onclick="loadYT('ytplayer8','Z3kdRSdjnx4')">
+          <div style="width:56px;height:56px;background:rgba(255,0,0,0.9);border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer" onclick="loadYT('ytplayer-xmas','Z3kdRSdjnx4')">
             <div style="width:0;height:0;border-style:solid;border-width:10px 0 10px 20px;border-color:transparent transparent transparent #fff;margin-left:4px"></div>
           </div>
         </div>
-      </div>
+        </div>
         <div class="vcard-overlay"></div>
         <div class="vcard-info"><p class="vcard-tag">Christmas</p><p class="vcard-title">Festive Campaign 2025</p></div>
       </div>
-      <div class="ccard" style="aspect-ratio:4/5">
-        <img src="https://drive.google.com/thumbnail?id=1CPQSZyZuYL_2JaMDf6VGQf-BPFm6a6MD&sz=w1200" alt="Diwali Campaign">
-        <div class="ccard-label"><p class="ccard-tag">Diwali</p><p class="ccard-name">Festival of Light Campaign</p></div>
       </div>
-      <div class="vcard portrait">
-        <div id="ytplayer9" class="yt-player-div" data-ytid="ss75QCLZA_M" style="position:absolute;inset:0;width:100%;height:100%;cursor:pointer">
-        <img src="https://img.youtube.com/vi/ss75QCLZA_M/maxresdefault.jpg" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0.85" onerror="this.src='https://img.youtube.com/vi/ss75QCLZA_M/hqdefault.jpg'" alt="video">
+      <div style="display:flex;flex-direction:column;gap:3px">
+        <div class="ccard" style="aspect-ratio:4/5">
+          <img src="https://drive.google.com/thumbnail?id=1CPQSZyZuYL_2JaMDf6VGQf-BPFm6a6MD&sz=w1200" alt="Diwali">
+          <div class="ccard-label"><p class="ccard-tag">Diwali</p><p class="ccard-name">Festival of Light</p></div>
+        </div>
+        <div class="vcard portrait">
+        <div id="ytplayer-undermin" class="yt-player-div" data-ytid="2VYgdn2gX_M" style="position:absolute;inset:0;width:100%;height:100%;cursor:pointer">
+        <img src="https://img.youtube.com/vi/2VYgdn2gX_M/maxresdefault.jpg" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0.85" onerror="this.src='https://img.youtube.com/vi/2VYgdn2gX_M/hqdefault.jpg'" alt="Short-form campaign series">
         <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;z-index:3">
-          <div style="width:56px;height:56px;background:rgba(255,0,0,0.9);border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer" onclick="loadYT('ytplayer9','ss75QCLZA_M')">
+          <div style="width:56px;height:56px;background:rgba(255,0,0,0.9);border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer" onclick="loadYT('ytplayer-undermin','2VYgdn2gX_M')">
             <div style="width:0;height:0;border-style:solid;border-width:10px 0 10px 20px;border-color:transparent transparent transparent #fff;margin-left:4px"></div>
           </div>
         </div>
+        </div>
+        <div class="vcard-overlay"></div>
+        <div class="vcard-info"><p class="vcard-tag">Under A Minute</p><p class="vcard-title">Short-form campaign series</p></div>
       </div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:3px">
+        <div class="vcard portrait">
+        <div id="ytplayer-val" class="yt-player-div" data-ytid="ss75QCLZA_M" style="position:absolute;inset:0;width:100%;height:100%;cursor:pointer">
+        <img src="https://img.youtube.com/vi/ss75QCLZA_M/maxresdefault.jpg" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0.85" onerror="this.src='https://img.youtube.com/vi/ss75QCLZA_M/hqdefault.jpg'" alt="Love Campaign 2025">
+        <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;z-index:3">
+          <div style="width:56px;height:56px;background:rgba(255,0,0,0.9);border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer" onclick="loadYT('ytplayer-val','ss75QCLZA_M')">
+            <div style="width:0;height:0;border-style:solid;border-width:10px 0 10px 20px;border-color:transparent transparent transparent #fff;margin-left:4px"></div>
+          </div>
+        </div>
+        </div>
         <div class="vcard-overlay"></div>
         <div class="vcard-info"><p class="vcard-tag">Valentine's</p><p class="vcard-title">Love Campaign 2025</p></div>
       </div>
-    </div>
-    <!-- Under a Minute 9:16 centred -->
-    <div style="display:flex;justify-content:center;background:var(--black);margin-top:3px">
-      <div class="vcard portrait" style="width:33.33%">
-        <div id="ytplayer10" class="yt-player-div" data-ytid="2VYgdn2gX_M" style="position:absolute;inset:0;width:100%;height:100%;cursor:pointer">
-        <img src="https://img.youtube.com/vi/2VYgdn2gX_M/maxresdefault.jpg" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0.85" onerror="this.src='https://img.youtube.com/vi/2VYgdn2gX_M/hqdefault.jpg'" alt="video">
-        <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;z-index:3">
-          <div style="width:56px;height:56px;background:rgba(255,0,0,0.9);border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer" onclick="loadYT('ytplayer10','2VYgdn2gX_M')">
-            <div style="width:0;height:0;border-style:solid;border-width:10px 0 10px 20px;border-color:transparent transparent transparent #fff;margin-left:4px"></div>
-          </div>
-        </div>
-      </div>
-        <div class="vcard-overlay"></div>
-        <div class="vcard-info"><p class="vcard-tag">Under A Minute</p><p class="vcard-title">Short-form campaign series</p></div>
       </div>
     </div>
   </div>
@@ -881,38 +866,70 @@ footer {
     </div>
   </div>
 
-  <!-- EGC row -->
+  <!-- EGC -->
   <div class="reveal" style="margin-bottom:8rem">
     <div class="eyebrow" style="margin-bottom:2rem">EGC · Employee Generated Content</div>
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:3px">
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:3px">
       <div class="vcard portrait">
-        <div id="ytplayer11" class="yt-player-div" data-ytid="r3u2tT4kzk4" style="position:absolute;inset:0;width:100%;height:100%;cursor:pointer">
-        <img src="https://img.youtube.com/vi/r3u2tT4kzk4/maxresdefault.jpg" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0.85" onerror="this.src='https://img.youtube.com/vi/r3u2tT4kzk4/hqdefault.jpg'" alt="video">
+        <div id="ytplayer-egc1" class="yt-player-div" data-ytid="r3u2tT4kzk4" style="position:absolute;inset:0;width:100%;height:100%;cursor:pointer">
+        <img src="https://img.youtube.com/vi/r3u2tT4kzk4/maxresdefault.jpg" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0.85" onerror="this.src='https://img.youtube.com/vi/r3u2tT4kzk4/hqdefault.jpg'" alt="Authentic brand presence">
         <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;z-index:3">
-          <div style="width:56px;height:56px;background:rgba(255,0,0,0.9);border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer" onclick="loadYT('ytplayer11','r3u2tT4kzk4')">
+          <div style="width:56px;height:56px;background:rgba(255,0,0,0.9);border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer" onclick="loadYT('ytplayer-egc1','r3u2tT4kzk4')">
             <div style="width:0;height:0;border-style:solid;border-width:10px 0 10px 20px;border-color:transparent transparent transparent #fff;margin-left:4px"></div>
           </div>
         </div>
-      </div>
+        </div>
         <div class="vcard-overlay"></div>
         <div class="vcard-info"><p class="vcard-tag">EGC · Team</p><p class="vcard-title">Authentic brand presence</p></div>
       </div>
       <div class="vcard portrait">
-        <img src="https://drive.google.com/thumbnail?id=1yuaszsQPfaxvtrixsWP8VNZr0fAvASec&sz=w1200" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0.8" alt="EGC Put a Finger Down">
+        <div id="ytplayer-egc2" class="yt-player-div" data-ytid="OVa6zoTzxac" style="position:absolute;inset:0;width:100%;height:100%;cursor:pointer">
+        <img src="https://img.youtube.com/vi/OVa6zoTzxac/maxresdefault.jpg" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0.85" onerror="this.src='https://img.youtube.com/vi/OVa6zoTzxac/hqdefault.jpg'" alt="Real voices, real brand love">
+        <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;z-index:3">
+          <div style="width:56px;height:56px;background:rgba(255,0,0,0.9);border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer" onclick="loadYT('ytplayer-egc2','OVa6zoTzxac')">
+            <div style="width:0;height:0;border-style:solid;border-width:10px 0 10px 20px;border-color:transparent transparent transparent #fff;margin-left:4px"></div>
+          </div>
+        </div>
+        </div>
         <div class="vcard-overlay"></div>
-        <div class="vcard-info"><p class="vcard-tag">EGC · Put a Finger Down</p><p class="vcard-title">Trend format, brand participation</p></div>
+        <div class="vcard-info"><p class="vcard-tag">EGC · Voxpop</p><p class="vcard-title">Real voices, real brand love</p></div>
+      </div>
+      <div class="vcard portrait">
+        <div id="ytplayer-egc3" class="yt-player-div" data-ytid="cK2RijDcv-k" style="position:absolute;inset:0;width:100%;height:100%;cursor:pointer">
+        <img src="https://img.youtube.com/vi/cK2RijDcv-k/maxresdefault.jpg" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0.85" onerror="this.src='https://img.youtube.com/vi/cK2RijDcv-k/hqdefault.jpg'" alt="Trend format">
+        <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;z-index:3">
+          <div style="width:56px;height:56px;background:rgba(255,0,0,0.9);border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer" onclick="loadYT('ytplayer-egc3','cK2RijDcv-k')">
+            <div style="width:0;height:0;border-style:solid;border-width:10px 0 10px 20px;border-color:transparent transparent transparent #fff;margin-left:4px"></div>
+          </div>
+        </div>
+        </div>
+        <div class="vcard-overlay"></div>
+        <div class="vcard-info"><p class="vcard-tag">EGC · Put a Finger Down</p><p class="vcard-title">Trend format</p></div>
       </div>
     </div>
+  </div>
+
+
+  <!-- STORY CREATIVES -->
+  <div class="reveal" style="margin-bottom:8rem">
+    <div class="eyebrow" style="margin-bottom:2rem">Story Creatives</div>
+    <div style="display:grid;grid-template-columns:repeat(6,1fr);gap:3px"><div style="aspect-ratio:9/16;overflow:hidden;background:var(--mid)"><img src="https://drive.google.com/thumbnail?id=1pDQ72tjHzMYS951cD2WwewnBcKEIiRi2&sz=w1200" style="width:100%;height:100%;object-fit:cover;opacity:0.85;transition:transform 0.5s,opacity 0.3s" onmouseover="this.style.transform='scale(1.04)';this.style.opacity='1'" onmouseout="this.style.transform='scale(1)';this.style.opacity='0.85'"></div><div style="aspect-ratio:9/16;overflow:hidden;background:var(--mid)"><img src="https://drive.google.com/thumbnail?id=1fIxjUTL-Q2FUgqpDcQHOUbVDEFCke0WM&sz=w1200" style="width:100%;height:100%;object-fit:cover;opacity:0.85;transition:transform 0.5s,opacity 0.3s" onmouseover="this.style.transform='scale(1.04)';this.style.opacity='1'" onmouseout="this.style.transform='scale(1)';this.style.opacity='0.85'"></div><div style="aspect-ratio:9/16;overflow:hidden;background:var(--mid)"><img src="https://drive.google.com/thumbnail?id=1JqKPfcHEG_q3W3QKaLMlMve8MZ3QLjDh&sz=w1200" style="width:100%;height:100%;object-fit:cover;opacity:0.85;transition:transform 0.5s,opacity 0.3s" onmouseover="this.style.transform='scale(1.04)';this.style.opacity='1'" onmouseout="this.style.transform='scale(1)';this.style.opacity='0.85'"></div><div style="aspect-ratio:9/16;overflow:hidden;background:var(--mid)"><img src="https://drive.google.com/thumbnail?id=1gp_hsDJ0qKGD68r0T5xxjIyjR73Bpdcb&sz=w1200" style="width:100%;height:100%;object-fit:cover;opacity:0.85;transition:transform 0.5s,opacity 0.3s" onmouseover="this.style.transform='scale(1.04)';this.style.opacity='1'" onmouseout="this.style.transform='scale(1)';this.style.opacity='0.85'"></div><div style="aspect-ratio:9/16;overflow:hidden;background:var(--mid)"><img src="https://drive.google.com/thumbnail?id=1scX4XMWKFyq0P6qDESD72A1jNHoNoRZI&sz=w1200" style="width:100%;height:100%;object-fit:cover;opacity:0.85;transition:transform 0.5s,opacity 0.3s" onmouseover="this.style.transform='scale(1.04)';this.style.opacity='1'" onmouseout="this.style.transform='scale(1)';this.style.opacity='0.85'"></div><div style="aspect-ratio:9/16;overflow:hidden;background:var(--mid)"><img src="https://drive.google.com/thumbnail?id=1UuF3jX6e9SFc3qIFHOAR-o5o_zzuOWkj&sz=w1200" style="width:100%;height:100%;object-fit:cover;opacity:0.85;transition:transform 0.5s,opacity 0.3s" onmouseover="this.style.transform='scale(1.04)';this.style.opacity='1'" onmouseout="this.style.transform='scale(1)';this.style.opacity='0.85'"></div></div>
+  </div>
+
+  <!-- LIFESTYLE SHOOTS -->
+  <div class="reveal" style="margin-bottom:8rem">
+    <div class="eyebrow" style="margin-bottom:2rem">Lifestyle Shoots</div>
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:3px"><div class="ccard" style="aspect-ratio:9/16"><img src="https://drive.google.com/thumbnail?id=1eD9ik45LcnRAMabEmDb27P9OgiTakQHE&sz=w1200" alt="Lifestyle" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0.85"><div class="ccard-label"><p class="ccard-tag">Lifestyle</p><p class="ccard-name">Shoot Direction</p></div></div><div class="ccard" style="aspect-ratio:9/16"><img src="https://drive.google.com/thumbnail?id=1iLPAZyqa8l1GiYxfviuegmRn-WJmZXiy&sz=w1200" alt="Lifestyle" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0.85"><div class="ccard-label"><p class="ccard-tag">Lifestyle</p><p class="ccard-name">Shoot Direction</p></div></div><div class="ccard" style="aspect-ratio:9/16"><img src="https://drive.google.com/thumbnail?id=17IfztgO8JPR0ed6KhnPRfhRol9D4Eo7C&sz=w1200" alt="Lifestyle" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0.85"><div class="ccard-label"><p class="ccard-tag">Lifestyle</p><p class="ccard-name">Shoot Direction</p></div></div><div class="ccard" style="aspect-ratio:9/16"><img src="https://drive.google.com/thumbnail?id=1cdX2zFUC-FibLJ0Dl1VtlmgSQznb5Yz-&sz=w1200" alt="Lifestyle" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0.85"><div class="ccard-label"><p class="ccard-tag">Lifestyle</p><p class="ccard-name">Shoot Direction</p></div></div></div>
   </div>
 
   <!-- BLOG -->
   <div class="reveal" style="margin-bottom:8rem">
     <div class="eyebrow" style="margin-bottom:2rem">Content Writing · SEO Blogs</div>
-    <a href="https://sommerbeauty.in/blogs/journal/on-the-go-makeup-touch-ups-the-only-products-you-actually-need-1" target="_blank" class="blog-card">
+    <a href="https://sommerbeauty.in/blogs/journal" target="_blank" class="blog-card">
       <div>
         <p class="blog-label">Sommer Beauty Blog</p>
-        <p class="blog-title">On-The-Go Makeup Touch-Ups: The Only Products You Actually Need</p>
-        <p class="blog-link">Read on sommerbeauty.in →</p>
+        <p class="blog-title">Sommer Beauty Journal — Brand Stories & Beauty Edits</p>
+        <p class="blog-link">Browse the full journal →</p>
       </div>
       <div class="blog-arrow">→</div>
     </a>
@@ -1072,7 +1089,8 @@ footer {
 
 function loadYT(divId, ytId) {
   var div = document.getElementById(divId);
-  div.innerHTML = '<iframe style="position:absolute;inset:0;width:100%;height:100%;border:none" src="https://www.youtube.com/embed/' + ytId + '?autoplay=1&rel=0&modestbranding=1&playsinline=1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
+  if(!div) return;
+  div.innerHTML = '<iframe style="position:absolute;inset:0;width:100%;height:100%;border:none" src="https://www.youtube.com/embed/' + ytId + '?autoplay=1&loop=1&playlist=' + ytId + '&rel=0&modestbranding=1&playsinline=1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
 }
 
 // CURSOR
@@ -1113,7 +1131,7 @@ function initC(id, total) {
 }
 function goC(id, total, idx) {
   state[id] = (idx + total) % total;
-  document.getElementById(id).style.transform = `translateX(-${state[id]*100}%)`;
+  var _el=document.getElementById(id); if(_el) _el.style.transform = `translateX(-${state[id]*100}%)`;
   const dotsEl = document.getElementById('d-' + id.replace('c-',''));
   if(dotsEl) Array.from(dotsEl.children).forEach((d,i) => d.className = 'dot'+(i===state[id]?' active':''));
 }
